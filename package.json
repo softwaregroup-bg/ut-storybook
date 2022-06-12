@@ -1,0 +1,72 @@
+{
+  "name": "ut-storybook",
+  "version": "8.0.0",
+  "main": "index.js",
+  "browser": "browser.js",
+  "pkg": {
+    "assets": [
+      "api/sql/**/*.sql"
+    ]
+  },
+  "resolutions": {
+    "webpack": "^4.46.0"
+  },
+  "overrides": {
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.5.8",
+    "@storybook/addon-essentials": "^6.5.8",
+    "@storybook/addon-interactions": "^6.5.8",
+    "@storybook/addon-storysource": "^6.5.8",
+    "@storybook/addons": "^6.5.8",
+    "@storybook/react": "^6.5.8",
+    "@storybook/testing-library": "^0.0.12",
+    "chromatic": "^6.5.6",
+    "commander": "^7.2.0",
+    "got": "11.1.3",
+    "http-proxy-middleware": "2.0.1",
+    "split2": "2.2.0",
+    "ut-function.merge": "^1.5.6"
+  },
+  "devDependencies": {
+    "tap": "^16.2.0",
+    "ut-tools": "^6.40.9"
+  },
+  "peerDependencies": {
+  },
+  "description": "Shared storybook code",
+  "scripts": {
+    "storybook": "ut-storybook start -p 6006 --ci",
+    "storybook:build": "ut-storybook",
+    "lint": "ut-lint .",
+    "release": "ut-release",
+    "changelog": "ut-changelog",
+    "check": "ut-check",
+    "cover": "ut-cover-parallel",
+    "lint-js": "ut-lint-js .",
+    "postpublish": "ut-postpublish",
+    "postversion": "ut-postversion",
+    "precommit": "ut-precommit",
+    "precover": "ut-precover",
+    "prepublish": "ut-prepublish",
+    "prepush": "ut-prepush",
+    "pretest": "ut-pretest",
+    "preversion": "ut-preversion",
+    "test": "ut-test-parallel",
+    "version": "./bin/ut-storybook.js build && ./bin/ut-storybook.js publish && ut-version",
+    "jenkins": "ut-jenkins",
+    "gitlab": "ut-gitlab"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "ut-storybook": "./bin/ut-storybook.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:softwaregroup-bg/ut-storybook.git"
+  },
+  "license": "Apache-2.0"
+}
