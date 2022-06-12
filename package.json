@@ -24,14 +24,14 @@
   },
   "devDependencies": {
     "tap": "^16.2.0",
-    "ut-tools": "^6.40.9"
+    "ut-tools": "^6.41.2"
   },
   "bundleDependencies": true,
   "description": "Shared storybook code",
   "scripts": {
     "storybook": "ut-storybook start -p 6006 --ci",
     "storybook:build": "ut-storybook",
-    "lint": "true",
+    "lint": "ut-lint .",
     "release": "ut-release",
     "changelog": "ut-changelog",
     "check": "ut-check",

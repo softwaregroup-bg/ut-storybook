@@ -157,4 +157,11 @@ program
         }
     });
 
+program
+    .command('test')
+    .description('Automated test')
+    .allowUnknownOption()
+    .allowExcessArguments()
+    .action(async(_, {args}) => {});
+
 program.parse();
