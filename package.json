@@ -46,7 +46,7 @@
     "pretest": "ut-pretest",
     "preversion": "ut-preversion",
     "test": "ut-test-parallel",
-    "version": "./bin/ut-storybook.js build && ./bin/ut-storybook.js publish && ut-version",
+    "version": "ut-version",
     "jenkins": "ut-jenkins",
     "gitlab": "ut-gitlab"
   },
