@@ -31,7 +31,7 @@
   "scripts": {
     "storybook": "ut-storybook start -p 6006 --ci",
     "storybook:build": "ut-storybook",
-    "lint": "ut-lint .",
+    "lint": "true",
     "release": "ut-release",
     "changelog": "ut-changelog",
     "check": "ut-check",
