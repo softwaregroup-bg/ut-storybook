@@ -1,3 +1,5 @@
+import React from 'react';
+
 if(process.env.NODE_ENV === 'production') require('./preview.global.css');
 
 export const parameters = ({
@@ -37,7 +39,5 @@ export const globalTypes = {
 }
 
 export const decorators = [
-    (Story, {globals: {backend, theme}}) => (
-        <Story {...{backend, theme}} />
-    )
+    (Story, {globals: {backend, theme}}) => React.createElement(Story, {backend, theme})
 ];
