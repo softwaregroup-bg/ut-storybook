@@ -11,7 +11,7 @@ const split = require('split2');
 
 program
     .command('start')
-    .description('Start storybook portal')
+    .description('Start the storybook')
     .allowUnknownOption()
     .allowExcessArguments()
     .action((_, {args}) => {
@@ -30,7 +30,7 @@ program
 
 program
     .command('build')
-    .description('Build storybook')
+    .description('Build the storybook')
     .allowUnknownOption()
     .allowExcessArguments()
     .action((_, {args}) => {
@@ -91,7 +91,7 @@ const DETAILS = /View build details at (.*)$/;
 
 program
     .command('publish')
-    .description('Publish storybook')
+    .description('Publish the storybook (at chromatic.com)')
     .allowUnknownOption()
     .allowExcessArguments()
     .action(async(_, {args}) => {
