@@ -1,5 +1,5 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
-const config = require('ut-config').load({config:{params: {appname: 'ut_portal_dev'}}});
+const config = require('ut-config').load({config: {params: {appname: 'ut_portal_dev'}}});
 
 module.exports = function expressMiddleware(router) {
     const proxyConfig = config.proxy || {};
@@ -13,4 +13,4 @@ module.exports = function expressMiddleware(router) {
             router.use(domain, createProxyMiddleware(domain, proxyConfig[domain]));
         }
     }
-}
+};

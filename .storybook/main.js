@@ -14,19 +14,19 @@ module.exports = {
                         injectType: 'lazyStyleTag'
                     }
                 }, {
-                    loader: config.module.rules[cssRule].use[1].loader,
+                    loader: config.module.rules[cssRule].use[1].loader
                 }]
             });
         }
         config.module.rules.forEach(rule => {
             if (rule.exclude && rule.exclude.toString() === '/node_modules/') {
                 rule.exclude = /node_modules[\\/](?!(impl|ut)-)/i;
-                rule.include.push(/node_modules[\\/]ut-/i)
+                rule.include.push(/node_modules[\\/]ut-/i);
             }
             if (rule && rule.test && rule.test.toString() === '/\\.css$/') {
                 rule.exclude = lazy;
                 rule.use[1].options = rule.use[1].options || {};
-                rule.use[1].options.modules = rule.use[1].options.modules || {}
+                rule.use[1].options.modules = rule.use[1].options.modules || {};
                 rule.use[1].options.modules.auto = /\.module\.css$/;
             }
         });
@@ -48,12 +48,16 @@ module.exports = {
         config.optimization.concatenateModules = false;
         const empty = require.resolve('./empty');
         config.resolve.alias['dtrace-provider'] = empty;
-        config.resolve.alias['fs'] = empty;
+        config.resolve.alias.fs = empty;
         config.resolve.alias['safe-json-stringify'] = empty;
-        config.resolve.alias['mv'] = empty;
+        config.resolve.alias.mv = empty;
         config.resolve.alias['source-map-support'] = empty;
-        config.resolve.alias['bufferutil'] = empty;
-        config.resolve.alias['@storybook/react'] = dirname(require.resolve('@storybook/react'));
+        config.resolve.alias.bufferutil = empty;
+        config.resolve.alias['@storybook/react'] = dirname(require.resolve('@storybook/react/package.json'));
+        config.resolve.alias['@mdx-js/react'] = dirname(require.resolve('@mdx-js/react/package.json'));
+        config.resolve.alias['@storybook/addon-docs'] = dirname(require.resolve('@storybook/addon-docs/package.json'));
+        config.resolve.alias['@storybook/addon-actions'] = dirname(require.resolve('@storybook/addon-actions/package.json'));
+        config.resolve.alias['@storybook/testing-library'] = dirname(require.resolve('@storybook/testing-library/package.json'));
         return config;
     },
     reactOptions: {
@@ -61,24 +65,24 @@ module.exports = {
     },
     typescript: {
         check: false,
-        reactDocgen: 'react-docgen-typescript',
+        reactDocgen: 'react-docgen-typescript'
     },
     features: {
         // storyStoreV7: true,
         // buildStoriesJson: true,
         postcss: false
     },
-    stories: [process.cwd().replace(/\\/g, '/') + '/portal/**/*.stories.@(js|tsx|mdx)'],
+    stories: [process.cwd().replace(/\\/g, '/') + '/@(portal|src)/**/*.stories.@(js|tsx|mdx)'],
     addons: [
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-a11y',
-        '@storybook/addon-storysource',
+        '@storybook/addon-storysource'
     ],
     // core: { builder: "@storybook/builder-vite" },
     async viteFinal(config) {
         config.server.fs.strict = false;
         config.root = process.cwd();
         return config;
-    },
+    }
 };

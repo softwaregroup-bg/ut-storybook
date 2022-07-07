@@ -1,6 +1,8 @@
+/* eslint-disable no-process-env */
 import React from 'react';
+import theme from './theme';
 
-if(process.env.NODE_ENV === 'production') require('./preview.global.css');
+if (process.env.NODE_ENV === 'production') require('./preview.global.css');
 
 export const parameters = ({
     layout: 'fullscreen',
@@ -10,8 +12,11 @@ export const parameters = ({
             barBg: '#2b2b2b'
         },
         codeTheme: 'a11y-dark',
-        StoryPreview: ({children}) => children,
+        StoryPreview: ({children}) => children
     },
+    docs: {
+        theme
+    }
 });
 
 export const globalTypes = {
@@ -36,7 +41,7 @@ export const globalTypes = {
             showName: false
         }
     }
-}
+};
 
 export const decorators = [
     (Story, {globals: {backend, theme}}) => React.createElement(Story, {backend, theme})
