@@ -18,6 +18,11 @@ module.exports = {
                 }]
             });
         }
+        config.module.rules.push({
+            test: /\.mjs$/,
+            include: /node_modules/,
+            type: 'javascript/auto'
+        });
         config.module.rules.forEach(rule => {
             if (rule.exclude && rule.exclude.toString() === '/node_modules/') {
                 rule.exclude = /node_modules[\\/](?!(impl|ut)-)/i;
