@@ -1,3 +1,12 @@
+## [8.0.5](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.0.4...v8.0.5) (2022-07-19)
+
+
+### Bug Fixes
+
+* *.mjs handling ([5b1d8e6](https://github.com/softwaregroup-bg/ut-storybook/commit/5b1d8e6d1c0f091a1c8f4056b05686d7d62b39b9))
+
+
+
 ## [8.0.4](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.0.3...v8.0.4) (2022-07-07)
 
 
