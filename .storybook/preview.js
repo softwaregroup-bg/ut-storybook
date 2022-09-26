@@ -31,6 +31,16 @@ export const globalTypes = {
             showName: false
         }
     },
+    dir: {
+        name: 'Direction',
+        description: 'LTR / RTL',
+        defaultValue: 'ltr',
+        toolbar: {
+            icon: 'back',
+            items: ['ltr', 'rtl'],
+            showName: false
+        }
+    },
     theme: {
         name: 'Theme',
         description: 'Theme',

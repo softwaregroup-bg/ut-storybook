@@ -48,7 +48,7 @@ module.exports = {
             }
         });
         config.watchOptions = {
-            ignored: /node_modules[\\/](?!(impl|ut)-)/
+            ignored: /node_modules[\\/](?!(impl|ut)-)|\.git[\\/]/
         };
         config.optimization.concatenateModules = false;
         const empty = require.resolve('./empty');
