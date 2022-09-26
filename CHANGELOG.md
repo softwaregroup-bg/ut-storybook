@@ -1,3 +1,12 @@
+# [8.1.0](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.0.6...v8.1.0) (2022-09-26)
+
+
+### Features
+
+* rtl button ([dba458a](https://github.com/softwaregroup-bg/ut-storybook/commit/dba458a861f0794fc5ce243d293a3798affa2611))
+
+
+
 ## [8.0.6](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.0.5...v8.0.6) (2022-08-23)
 
 
