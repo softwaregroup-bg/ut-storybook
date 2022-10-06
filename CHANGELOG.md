@@ -1,3 +1,12 @@
+# [8.2.0](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.1.0...v8.2.0) (2022-10-06)
+
+
+### Features
+
+* support tesseract.js ([22f192d](https://github.com/softwaregroup-bg/ut-storybook/commit/22f192de5dc1e11ed21582968fd4af4619b8e0d1))
+
+
+
 # [8.1.0](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.0.6...v8.1.0) (2022-09-26)
 
 

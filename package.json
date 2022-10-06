@@ -1,6 +1,6 @@
 {
   "name": "ut-storybook",
-  "version": "8.1.0",
+  "version": "8.2.0",
   "resolutions": {
     "webpack": "^4.46.0"
   },
