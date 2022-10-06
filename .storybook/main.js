@@ -18,6 +18,25 @@ module.exports = {
                 }]
             });
         }
+        config.module.rules.unshift({
+            test: /tesseract\.js\/dist\/|tesseract\.js-core\//,
+            use: [{
+                loader: require.resolve('file-loader'),
+                options: {
+                    outputPath: 'tesseract'
+                }
+            }]
+        });
+        config.module.rules.unshift({
+            test: /\.traineddata\.gz/,
+            use: [{
+                loader: require.resolve('file-loader'),
+                options: {
+                    name: '[contenthash].traineddata.gz',
+                    outputPath: 'tesseract'
+                }
+            }]
+        });
         config.module.rules.push({
             test: /\.mjs$/,
             include: /node_modules/,
