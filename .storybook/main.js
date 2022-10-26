@@ -96,7 +96,10 @@ module.exports = {
         // buildStoriesJson: true,
         postcss: false
     },
-    stories: [process.cwd().replace(/\\/g, '/') + '/@(portal|src)/**/*.stories.@(js|tsx|mdx)'],
+    stories: [
+        process.cwd().replace(/\\/g, '/') + '/@(portal|src)/**/*.stories.@(js|tsx|mdx)',
+        process.cwd().replace(/\\/g, '/') + '/ut-*/portal/*.stories.@(js|tsx|mdx)'
+    ],
     addons: [
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
