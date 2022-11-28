@@ -8,16 +8,16 @@
     "webpack": "^4.46.0"
   },
   "dependencies": {
-    "@storybook/addon-a11y": "^6.5.12",
-    "@storybook/addon-actions": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-interactions": "^6.5.12",
-    "@storybook/addon-storysource": "^6.5.12",
-    "@storybook/addons": "^6.5.12",
-    "@storybook/react": "^6.5.12",
+    "@storybook/addon-a11y": "^6.5.13",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-storysource": "^6.5.13",
+    "@storybook/addons": "^6.5.13",
+    "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^12.1.5",
-    "chromatic": "^6.10.1",
+    "chromatic": "^6.11.4",
     "commander": "^7.2.0",
     "got": "11.8.5",
     "http-proxy-middleware": "2.0.1",
@@ -28,7 +28,7 @@
     "ut-function.merge": "^1.5.6"
   },
   "devDependencies": {
-    "tap": "^16.3.0"
+    "tap": "^16.3.2"
   },
   "bundleDependencies": true,
   "description": "Shared storybook code",

@@ -19,15 +19,30 @@ export const parameters = ({
     }
 });
 
+function getBackend() {
+    try {
+        return (window && window.localStorage && window.localStorage.getItem('ut-storybook.backend')) || 'mock';
+    } catch (error) {
+        return 'mock';
+    }
+}
+
+function setBackend(backend) {
+    try {
+        const stored = (window && window.localStorage && window.localStorage.getItem('ut-storybook.backend')) || 'mock';
+        if (stored !== backend) window && window.localStorage && window.localStorage.setItem('ut-storybook.backend', backend);
+    } catch (error) {
+    }
+}
+
 export const globalTypes = {
-    // TODO - finish handling
     backend: {
         name: 'Back end',
         description: 'Back end API mock',
-        defaultValue: 'mock',
+        defaultValue: getBackend(),
         toolbar: {
             icon: 'database',
-            items: ['mock', 'admin', 'solution', 'selfservice', 'cms', 'localhost'],
+            items: ['mock', 'origin'],
             showName: false
         }
     },
@@ -44,15 +59,18 @@ export const globalTypes = {
     theme: {
         name: 'Theme',
         description: 'Theme',
-        defaultValue: 'dark-compact',
+        defaultValue: 'compact',
         toolbar: {
             icon: 'eye',
-            items: ['dark', 'light', 'dark-compact', 'light-compact'],
+            items: ['compact', 'big'],
             showName: false
         }
     }
 };
 
 export const decorators = [
-    (Story, {globals: {backend, theme}}) => React.createElement(Story, {backend, theme})
+    (Story, {globals: {backend, theme}}) => {
+        setBackend(backend);
+        return React.createElement(Story, {backend, theme});
+    }
 ];
