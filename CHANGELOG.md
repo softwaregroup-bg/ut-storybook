@@ -1,3 +1,12 @@
+## [8.3.2](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.3.1...v8.3.2) (2022-12-02)
+
+
+### Bug Fixes
+
+* Windows paths ([098148d](https://github.com/softwaregroup-bg/ut-storybook/commit/098148d57773783bc08e00548ba75d11b0910bc1))
+
+
+
 ## [8.3.1](https://github.com/softwaregroup-bg/ut-storybook/compare/v8.3.0...v8.3.1) (2022-11-28)
 
 
