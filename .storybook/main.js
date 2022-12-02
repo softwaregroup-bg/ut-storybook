@@ -19,7 +19,7 @@ module.exports = {
             });
         }
         config.module.rules.unshift({
-            test: /tesseract\.js\/dist\/|tesseract\.js-core\//,
+            test: /tesseract\.js[\\/]dist[\\/]|tesseract\.js-core[\\/]/,
             use: [{
                 loader: require.resolve('file-loader'),
                 options: {
