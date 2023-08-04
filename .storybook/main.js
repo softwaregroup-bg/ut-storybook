@@ -1,5 +1,5 @@
 const lazy = /primereact[/\\]resources[/\\]themes[/\\].+\.css$/i;
-const {dirname, sep} = require('path');
+const {dirname} = require('path');
 
 module.exports = {
     // TODO consider https://www.npmjs.com/package/neutrino-middleware-storybook
@@ -19,7 +19,7 @@ module.exports = {
             });
         }
         config.module.rules.unshift({
-            test: /tesseract\.js\/dist\/|tesseract\.js-core\//,
+            test: /tesseract\.js[\\/]dist[\\/]|tesseract\.js-core[\\/]/,
             use: [{
                 loader: require.resolve('file-loader'),
                 options: {
