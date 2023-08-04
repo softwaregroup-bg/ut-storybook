@@ -42,6 +42,19 @@ module.exports = {
             include: /node_modules/,
             type: 'javascript/auto'
         });
+        config.module.rules.push({
+            test: /\.js$/,
+            include: [/node_modules[\\/]@react-leaflet/, /node_modules[\\/]react-leaflet/],
+            use: [
+                {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [['@babel/preset-env', {modules: 'commonjs'}]]
+                    }
+                }
+            ]
+        });
+
         config.module.rules.forEach(rule => {
             if (rule.exclude && rule.exclude.toString() === '/node_modules/') {
                 rule.exclude = /node_modules[\\/](?!(impl|ut)-)/i;
